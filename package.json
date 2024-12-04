@@ -2,7 +2,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@mlndshh"
   },
-  "name": "@mlndshh/mlnd-ui",
+  "name": "mlnd-ui",
   "version": "1.0.0",
   "description": "",
   "type": "module",
