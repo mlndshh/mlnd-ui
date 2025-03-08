@@ -1,0 +1,59 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./Example.tsx";
+import * as Link from "./Link.stories.tsx";
+
+<Meta of={Link} title="Link" />
+
+# Link
+
+A flexible link component that allows for custom styling and can wrap other components like Header.
+
+#### Example
+
+<Canvas of={Link.Basic} />
+
+## Usage
+
+```tsx
+import { Link, Header } from "sld-ui";
+
+const Example = () => {
+  return (
+    <>
+      <Link href="https://example.com">Simple link text</Link>
+
+      <Link href="https://example.com" target="_blank">
+        Opens in new tab
+      </Link>
+
+      <Link href="https://example.com" className="text-blue-600">
+        <Header level={3}>Header inside a link</Header>
+      </Link>
+    </>
+  );
+};
+
+export default Example;
+```
+
+## Link Variations
+
+### Basic Link
+
+<Canvas of={Link.Basic} />
+
+### Link with Header Component
+
+<Canvas of={Link.WithHeader} />
+
+### Custom Styled Link
+
+<Canvas of={Link.CustomStyle} />
+
+## Arguments
+
+- **href** `string` - The URL the link points to.
+- **children** `ReactNode` - The content of the link (can be text or components).
+- **className** `string` (optional) - Additional CSS classes to apply to the link.
+- **target** `string` (optional) - The target attribute for the anchor tag (e.g., "\_blank").
+- **rel** `string` (optional) - The rel attribute for the anchor tag.

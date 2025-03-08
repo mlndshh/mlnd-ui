@@ -1,0 +1,56 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./Example.tsx";
+import * as Header from "./Header.stories.tsx";
+
+<Meta of={Header} title="Header" />
+
+# Header
+
+A flexible heading component that supports all 6 HTML heading levels (h1-h6).
+
+#### Example
+
+<Canvas of={Header.Heading1} />
+
+## Usage
+
+```tsx
+import { Header } from "sld-ui";
+
+const Example = () => {
+  return (
+    <>
+      <Header level={1}>Main Heading</Header>
+      <Header level={2}>Subheading</Header>
+      <Header level={3} className="text-blue-600">
+        Custom Styled Heading
+      </Header>
+    </>
+  );
+};
+
+export default Example;
+```
+
+## Heading Levels
+
+The component supports all 6 HTML heading levels:
+
+<Canvas of={Header.Heading1} />
+<Canvas of={Header.Heading2} />
+<Canvas of={Header.Heading3} />
+<Canvas of={Header.Heading4} />
+<Canvas of={Header.Heading5} />
+<Canvas of={Header.Heading6} />
+
+## Custom Styling
+
+You can add custom classes to modify the appearance:
+
+<Canvas of={Header.CustomStyled} />
+
+#### Arguments
+
+- **level** `1 | 2 | 3 | 4 | 5 | 6` - Determines which heading element to render (h1-h6).
+- **children** `ReactNode` - The content of the header.
+- **className** `string` (optional) - Additional CSS classes to apply to the header.
